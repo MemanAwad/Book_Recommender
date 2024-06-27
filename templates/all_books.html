@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}All Books - Book Recommender{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>All Available Books</h2>
+    <div class="row">
+        {% if books %}
+        {% for book in books %}
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <img src="{{ book.cover_image }}" class="card-img-top" alt="{{ book.title }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ book.title }}</h5>
+                    <p class="card-text"><strong>Author:</strong> {{ book.author }}</p>
+                    <p class="card-text"><strong>Category:</strong> {{ book.category }}</p>
+                    <p class="card-text"><strong>Interests:</strong> {{ book.interests|join(', ') }}</p>
+                    <p class="card-text"><strong>Published:</strong> {{ book.publication_date }}</p>
+                    <p class="card-text">{{ book.synopsis }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <div class="col">
+            <p>No books found.</p>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

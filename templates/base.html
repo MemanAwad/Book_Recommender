@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Select CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css"
+      rel="stylesheet"
+    />
+    <title>{% block title %}Book Recommendation{% endblock %}</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <style>
+    .navbar-brand:hover{
+      color: #000000; /* Adjust link hover color */
+
+    }
+    .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Optional: Center vertically as well */
+}
+
+.navbar-brand {
+    color: #3a5c7e; /* Change font color */
+    font-family: Helvetica, sans-serif;
+    font-size: 30px; /* Adjust font size as needed */
+    font-weight: bold; /* Make text bold */
+    position: relative;
+    left: 150px; /* Adjust left position as needed */
+}
+
+          .sidebar {
+              position: fixed;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              z-index: 100; /* Adjust z-index as needed */
+              padding: 48px 0 0; /* Adjust top padding to avoid overlapping with navbar */
+              box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+          }
+          .sidebar-sticky {
+              top: 48px; /* Match top padding of .sidebar */
+              height: calc(100vh - 48px); /* Adjust height to fill viewport */
+              overflow-x: hidden;
+              overflow-y: auto; /* Enable scrolling for overflow content */
+          }
+
+          .sidebar-sticky{
+            margin-top: 1.5cm; /* Adjust the top margin as needed */
+            }
+
+          .nav-link {
+            font-family: Helvetica, sans-serif;
+
+            display: block;
+            color: #ffffff;
+            background-color: #3a5c7e; /* Background color */
+            border: 1px solid #ced4da; /* Border color */
+            border-radius: 0.25rem; /* Rounded corners */
+            }
+
+          .nav-link:hover {
+              color: #000000; /* Adjust link hover color */
+          }
+          .sidebar-heading {
+              font-size: 0.75rem;
+              text-transform: uppercase;
+              font-weight: bold;
+              color: #999; /* Adjust heading color */
+          }
+          .sidebar-brand {
+                          font-family: Helvetica, sans-serif;
+
+              font-size: 1.2rem;
+              font-weight: bold;
+              color: #4574b2; /* Adjust brand color */
+          }
+          main {
+              margin-top: 80px; /* Adjust margin to clear navbar height */
+              padding: 20px; /* Add padding to content */
+          }
+          footer {
+              margin-top: 20px; /* Add margin to separate content from footer */
+          }
+          .card {
+              margin-bottom: 20px; /* Add margin between cards */
+          }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <a class="navbar-brand" href="{{ url_for('index') }}">Book Recommender</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('about') }}">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('all_books') }}">All Books</a>
+            </li>
+              <!-- Add more sidebar links as needed -->
+            </ul>
+          </div>
+        </nav>
+
+        <main role="main" class="col-md-10 ml-sm-auto px-4">
+          <!-- Content will be injected here by other templates -->
+          <div class="container">{% block content %} {% endblock %}</div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 bg-light">
+      <div class="container">
+        <span class="text-muted">© 2024 Book Recommender</span>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="{{ url_for('static', filename='js/jquery-3.5.1.slim.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <!-- Bootstrap Select JS -->
+    <script src="{{ url_for('static', filename='js/bootstrap-select.min.js') }}"></script>
+  </body>
+</html>
