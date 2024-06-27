@@ -1,0 +1,107 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Background color */
+    color: #373A40; /* Text color */
+}
+
+.container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.jumbotron {
+    background-color: #686D76; /* Jumbotron background color */
+    color: #ffffff; /* Jumbotron text color */
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.navbar {
+    background-color: #466fc2; /* Navbar background color */
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100; /* Adjust z-index as needed */
+    padding: 48px 0 0; /* Adjust top padding to avoid overlapping with navbar */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+}
+.sidebar-sticky {
+    top: 48px; /* Match top padding of .sidebar */
+    height: calc(100vh - 48px); /* Adjust height to fill viewport */
+    overflow-x: hidden;
+    overflow-y: auto; /* Enable scrolling for overflow content */
+}
+.nav-link {
+    color: #6f2525; /* Adjust link color */
+}
+.nav-link:hover {
+    color: #4d5f6c; /* Adjust link hover color */
+}
+.sidebar-heading {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #999; /* Adjust heading color */
+}
+
+.btn123{
+    display: block;
+            color: #ffffff;
+            background-color: #3a5c7e; /* Background color */
+            border: 1px solid #373A40; /* Border color */
+            border-radius: 0.25rem; /*
+}
+.sidebar-brand {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4880ab; /* Adjust brand color */
+}
+
+
+.footer {
+    text-align: center;
+    background-color: #373A40; /* Footer background color */
+    color: #ffffff; /* Footer text color */
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Card styles */
+.card {
+    margin-bottom: 20px;
+    border: none;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
+}
+
+.card-img-top {
+    height: 300px; /* Adjust as needed */
+    object-fit: cover;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card-text {
+    color: #686D76; /* Card text color */
+}
+
+/* Book details page */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .container {
+        max-width: 750px; /* Adjust container width for larger screens */
+    }
+}
