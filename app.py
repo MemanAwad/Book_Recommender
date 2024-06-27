@@ -1,4 +1,4 @@
-#import flask framework
+#mini project by raghad al zoughbi and meman awad
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
