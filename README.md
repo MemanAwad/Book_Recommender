@@ -15,7 +15,7 @@ There Is a few setup to do before running the website:
 
 
 ## key features and how its work: 
-1.	 **Select your interest:** Choose from a variety of genres such as drama, horror, action, romance and more!
+1.	**Select your interest:** Choose from a variety of genres such as drama, horror, action, romance and more!
 2.	**Choose a category:** Narrow your search by selecting the category you want, there are four category available (Books, Novels, Academic books, and books turned into novels.) 
 3.	**Get recommendation:** Click on Recommend Button then The book-recommender will suggest you books based on your selection along with the information about the books (like the author, publication year, and brief).
 4.	**if no books are available in your match, try another catigory**
