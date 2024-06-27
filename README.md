@@ -25,7 +25,7 @@ Use book recommender and enjoy discovering books world !!!!
 
 
 ## Development
- Developed mainly using python programming language, html, and CSS, we have also used flask as a framework for API route and processing request.
+Developed mainly using python programming language, html, and CSS, we have also used flask as a framework for API route and processing request.
 
 ## Development team
 ### 1.	Raghad Alzoghbi.
