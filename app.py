@@ -3,7 +3,7 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-#  book data organized by categories and interests
+#book data organized by categories and interests
 books = [
     {
         'id': 1,
